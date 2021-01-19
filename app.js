@@ -1,19 +1,10 @@
-var fs = require('fs');
+var http = require('http');
 
-// fs.unlink('writeMe.txt', err => {
-
-// });
-
-// fs.mkdir('stuff', () => {
-//     fs.readFile('readMe.txt', 'utf8', (err, data) => {
-//         fs.writeFile('./stuff/writeMe.txt', data, err => {
-
-//         });
-//     });
-// });
-
-fs.unlink('./stuff/writeMe.txt', () => {
-    fs.rmdir('stuff', err => {
-        
-    });
+var server = http.createServer(function(req, res) {
+    console.log('request was made: ' + req.url);
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hey Ninjas');
 });
+
+server.listen(3000, '127.0.0.1');
+console.log('yo dawgs, now listening to port 3000');
