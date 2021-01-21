@@ -19,31 +19,15 @@
             text-align: center;
         }
 
-        h2 {
-            font-size: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
-        p, li {
+        p {
             font-size: 16px;
             text-align: center;
         }
     </style>
 </head>
 <body>
-
     <%- include('partials/nav'); %>
-    
-    <h1>Welcome to the profile of <%= person %></h1>
-    <p><strong>Age : <%= data.age %></strong></p>
-    <p><strong>Hob : <%= data.job %></strong></p>
-    <h2>Hobbies :</h2>
-    <ul>
-        <% data.hobbies.forEach(item => { %>
-            <li><%= item %></li> 
-        <% }); %>
-    </ul>
+    <h1>Contact Us!</h1>
+    <p>Contact the collest cats on the web right here...</p>
 </body>
 </html>
